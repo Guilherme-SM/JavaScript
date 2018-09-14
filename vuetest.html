@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/vue.css">
+	<title>Olá Mundo - Powered by Vue JS</title>
+	<script src="js/Vue.js"></script>
+</head>
+<body class="bg">
+	<div id="helloworld">
+		<p>Abra o Diário de bordo abaixo para visualizar as mensagens</p><br>
+		<p>Através do Log de comandos JS. Suportado pelo VUE.js</p>
+		<button id="hlwbutton"v-on:click="say('Dia 1: Novo Registro Criado!\nDia 2: Nada de Importante aconteceu\nDia 3: O Comandante adotou o Vue.js em seu projeto, muito bem!')">
+			Diário de Bordo
+		</button>
+	</div>
+	<script>
+		new Vue({
+		  el: '#helloworld',
+		  methods: {
+		    say: function (message) {
+		      alert(message)
+		    }
+		  }
+		})
+	</script>
+</body>
+</html>
